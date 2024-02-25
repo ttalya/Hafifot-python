@@ -1,0 +1,10 @@
+function Set-ComputerName{
+    param(
+        [string]$name,
+        [string]$newName
+    )
+
+    Rename-Computer -ComputerName $name -NewName $newName
+    Restart-Computer -ComputerName $name
+}
+
